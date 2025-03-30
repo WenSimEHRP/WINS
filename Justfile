@@ -20,6 +20,7 @@ release: preprocess
 
 # preprocess the pnml file
 preprocess:
+    ./quickgen.py
     ./spritesets.py
     ./build.py
     gcc -E -P -x c tags.txt \

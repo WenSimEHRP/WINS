@@ -1,0 +1,41 @@
+spritelayout basic_x(){
+    ground {sprite: GROUNDSPRITE_RAIL_X;}
+    building {
+        sprite: CUSTOM(0, pos_base_platforms_start + LOAD_TEMP(t_style));
+        xextent: 16;
+        yextent: 6;
+        zextent: 4;
+    }
+}
+
+spritelayout basic_y(){
+    ground {sprite: GROUNDSPRITE_RAIL_Y;}
+    building {
+        sprite: CUSTOM(0, pos_base_platforms_start + LOAD_TEMP(t_style) + 8);
+        yextent: 16;
+        xextent: 6;
+        zextent: 4;
+    }
+}
+
+spritelayout basic_opp_x(){
+    ground {sprite: GROUNDSPRITE_RAIL_X;}
+    building {
+        sprite: CUSTOM(0, pos_base_platforms_start + LOAD_TEMP(t_style));
+        xextent: 16;
+        yextent: 6;
+        yoffset: 10;
+        zextent: 4;
+    }
+}
+
+spritelayout basic_opp_y(){
+    ground {sprite: GROUNDSPRITE_RAIL_Y;}
+    building {
+        sprite: CUSTOM(0, pos_base_platforms_start + LOAD_TEMP(t_style) + 8);
+        yextent: 16;
+        xextent: 6;
+        xoffset: 10;
+        zextent: 4;
+    }
+}
