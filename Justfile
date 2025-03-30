@@ -55,3 +55,8 @@ clean:
 
 verify:
     md5sum {{NAME}}.grf | tee md5sum.txt -a
+
+# make the sprites. do not use if you don't have aseprite
+sprites:
+    @aseprite --help > /dev/null || { echo "Aseprite isn't installed"; exit 1; }
+    make all

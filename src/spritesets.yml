@@ -99,7 +99,7 @@ tetsubashi:
     - style_0: tmpl_tetsubashi(1, "gfx/tetsubashi.png")
     - underlay: tmpl_tetsubashi(0, "gfx/tetsubashi.png")
     - dam: tmpl_tetsubashi(2, "gfx/tetsubashi.png")
-    - river: tmpl_tetsubashi_river("gfx/tetsubashi_river.png", "gfx/tetsubashi_river_mask.png")
+    - river: tmpl_tetsubashi_river("gfx/tetsubashi_river.png", "gfx/tetsubashi_river_mask_8bpp.png")
 
 base_platforms:
   size: 48
