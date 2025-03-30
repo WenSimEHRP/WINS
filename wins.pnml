@@ -9,5 +9,7 @@
 #include "src/yard.pnml"
 #include "src/catenary.pnml"
 #include "src/tetsubashi.pnml"
+#include "src/nanaimo.pnml"
 
 #include "generated/platforms.nml"
+#include "generated/base_platforms.nml"
