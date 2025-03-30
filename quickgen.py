@@ -36,7 +36,7 @@ tmpl = Template(tmpl)
 with open("generated/base_platforms.nml", "w") as f:
     f.write("")
 
-for name in ("default", "nanaimo"):
+for name in ("default", "nanaimo", "wooden"):
     for i in range(24):
         layouts = ["basic_x", "basic_y"]
         if i % 8 >= 4:

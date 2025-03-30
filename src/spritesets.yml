@@ -105,4 +105,5 @@ base_platforms:
   size: 48
   items:
     - nanaimo: tmpl_platform(0, 8, 9, 32, 224, "gfx/platforms/nanaimo.png")
+    - wooden: tmpl_platform(0, 1, 2, 32, 0,   "gfx/platforms/wooden.png")
     - default: tmpl_platform(0, 1, 2, 32, 0,   "gfx/platforms/base_platforms.png")
