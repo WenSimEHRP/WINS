@@ -3,6 +3,9 @@ NAME := "wins"
 def:
     @just --list
 
+# option used by ci build
+ci: setup sprites release pack
+
 # build the newgrf (debug, no crop)
 build: preprocess
     ./nml/nmlc -p DEFAULT {{NAME}}.nml --grf {{NAME}}.grf --nml {{NAME}}_parsed.nml --nfo={{NAME}}.nfo

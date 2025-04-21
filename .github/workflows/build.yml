@@ -22,12 +22,16 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
 
+      - name: Cache Nix store
+        uses: nix-community/cache-nix-action@v6
+        with:
+          store-path: |
+            $(nix-build --no-out-link -E '(import <nixpkgs> {}).aseprite')
+          key: ${{ runner.os }}-nix-aseprite
+
       - name: Build with Nix
         run: |
-          nix-shell --run "just setup"
-          nix-shell --run "just sprites"
-          nix-shell --run "just release"
-          nix-shell --run "just pack"
+          nix-shell --run "just ci"
 
       - name: Upload tarball artifact
         uses: actions/upload-artifact@v4
