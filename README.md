@@ -40,8 +40,15 @@ Requirements:
 - gcc
 - git
 - sh (use git bash on windows)
+- aseprite
+
+A `shell.nix` file is provided to simplify dependencies.
+If you only want the `.grf` file, go check the "Actions" tab.
 
 ```sh
+# make the sprites
+just sprites
+
 # set up nml dependency
 just setup
 
