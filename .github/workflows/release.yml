@@ -9,6 +9,9 @@ on:
       - "*.*.*"
   workflow_dispatch:
 
+env:
+  NIXPKGS_ALLOW_UNFREE: 1
+
 jobs:
   build:
     runs-on: ubuntu-latest
