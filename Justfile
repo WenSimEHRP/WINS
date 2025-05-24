@@ -4,10 +4,10 @@ def:
     @just --list
 
 # option used by ci build
-ci: setup sprites release pack
+ci: sprites build_release pack
 
 # build the newgrf (debug, no crop)
-build: preprocess
+build_debug: preprocess
     ./nml/nmlc -p DEFAULT {{NAME}}.nml --grf {{NAME}}.grf --nml {{NAME}}_parsed.nml --nfo={{NAME}}.nfo
     @echo "All jobs done"
     @du -bh {{NAME}}.nml
@@ -15,7 +15,7 @@ build: preprocess
     @du -bh {{NAME}}.nfo
 
 # build the newgrf (release, crop)
-release: preprocess
+build_release: preprocess
     ./nml/nmlc -p DEFAULT -c {{NAME}}.nml --grf {{NAME}}.grf
     @echo "All jobs done"
     @du -bh {{NAME}}.nml
@@ -33,11 +33,6 @@ preprocess:
         -D COMMIT="$(git rev-list --count HEAD || echo 1145)" \
         -D MIN_COMMIT="$(git rev-list --count "$(cat min_compatible_version)" || echo 1)" \
         > {{NAME}}.nml
-
-# set up nml
-setup:
-    rm -rf nml
-    git submodule update --init --recursive --remote
 
 # copy the grf to the openttd newgrf folder (linux)
 cp:

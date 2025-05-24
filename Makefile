@@ -27,9 +27,3 @@ all: $(PNG_FILES)
 
 clean:
 	rm -f $(PNG_FILES)
-
-debug:
-	@echo "8BPP Aseprite files ($(words $(ASEPRITE_8BPP_FILES))):"
-	@for file in $(ASEPRITE_8BPP_FILES); do echo "  $$file"; done
-	@echo "RGB Aseprite files ($(words $(ASEPRITE_RGB_FILES))):"
-	@for file in $(ASEPRITE_RGB_FILES); do echo "  $$file"; done

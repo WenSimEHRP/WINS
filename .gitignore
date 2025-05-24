@@ -3,4 +3,6 @@
 *.nml
 *.tar
 *.nfo
+gfx/platforms/*.png
 custom_tags.txt
+__pycache__
