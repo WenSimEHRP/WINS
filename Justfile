@@ -8,7 +8,7 @@ ci: sprites build_release pack
 
 # build the newgrf (debug, no crop)
 build_debug: preprocess
-    ./nml/nmlc -p DEFAULT {{NAME}}.nml --grf {{NAME}}.grf --nml {{NAME}}_parsed.nml --nfo={{NAME}}.nfo
+    nmlc -p DEFAULT {{NAME}}.nml --grf {{NAME}}.grf --nml {{NAME}}_parsed.nml --nfo={{NAME}}.nfo
     @echo "All jobs done"
     @du -bh {{NAME}}.nml
     @du -bh {{NAME}}.grf
@@ -16,13 +16,13 @@ build_debug: preprocess
 
 # build the newgrf (release, crop)
 build_release: preprocess
-    ./nml/nmlc -p DEFAULT -c {{NAME}}.nml --grf {{NAME}}.grf
+    nmlc -p DEFAULT -c {{NAME}}.nml --grf {{NAME}}.grf
     @echo "All jobs done"
     @du -bh {{NAME}}.nml
     @du -bh {{NAME}}.grf
 
 # preprocess the pnml file
-preprocess:
+preprocess: sprites
     ./quickgen.py
     ./spritesets.py
     ./build.py

@@ -1,6 +1,6 @@
 with import <nixpkgs> { };
 let
-  revision = "2fe6c241e2d0885a924c2372af27b756998d76e8";
+  revision = "fe701053066ec5f734026fcc6326187792098c14";
   openttd-nml = pkgs.openttd-nml.overrideAttrs (old: {
     version = "master-" + revision;
     src = pkgs.fetchFromGitHub {
@@ -18,5 +18,7 @@ mkShell {
     openttd-nml
     aseprite
     just
+    python313
+    python313Packages.pyyaml
   ];
 }
