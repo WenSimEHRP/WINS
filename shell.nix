@@ -7,7 +7,7 @@ let
       owner = "OpenTTD";
       repo = "nml";
       rev = revision;
-      sha256 = "sha256-8ixbCR6mebu+yu/sYCI0im+mf41WSg9Xq8QtR8avBe8=";
+      sha256 = "sha256-zkhEQzEyEknzSyFHJMAQ+F/AVqBqd0PsPHPB8HcF05Q=";
     };
   });
 in
